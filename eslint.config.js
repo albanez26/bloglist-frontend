@@ -1,4 +1,4 @@
-import globals from 'globals';
+import globals from 'globals'
 import js from '@eslint/js'
 
 export default [
@@ -6,7 +6,7 @@ export default [
   {
     files: ["**/*.js"],
     languageOptions: {
-      sourceType: "commonjs",
+      sourceType: "module",
       globals: {
         ...globals.browser,
       },

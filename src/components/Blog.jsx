@@ -34,7 +34,7 @@ const Blog = ({ blog }) => {
   }
 
   const blogInfo = () => (
-    <div>
+    <div className='blog-info'>
       <p>{ blogToShow.url }</p>
       <p>
         Likes { blogToShow.likes }{' '}
@@ -47,15 +47,15 @@ const Blog = ({ blog }) => {
 
   return (
     <>
-      {blogToShow && (
-        <div style={blogStyle}>
-          {blogToShow.title}{" "}
-          <button onClick={() => setVisibleInfo(!visibleInfo)}>
+      { blogToShow && (
+        <div style={ blogStyle } className='blog-container'>
+          { blogToShow.title } by { blogToShow.author }
+          <button onClick={ () => setVisibleInfo(!visibleInfo) }>
             {visibleInfo ? "Hide" : "View"}
           </button>
-          {visibleInfo && blogInfo()}
+          { visibleInfo && blogInfo() }
         </div>
-      )}
+      ) }
     </>
   );
 }

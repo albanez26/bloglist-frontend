@@ -4,12 +4,14 @@ module.exports = {
     browser: true,
     es2020: true,
     node: true,
+    "vitest-globals/env": true
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:vitest-globals/recommended',
     'prettier'
   ],
   parserOptions: {
